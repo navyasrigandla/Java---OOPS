@@ -1,0 +1,121 @@
+class Appointment{
+    private String patName; //1.
+    private String docName;
+    private String appDate;
+    private String appTime;
+    private double consFee;
+}
+class Appointment{
+    private String patName; //2.
+    private String docName;
+    private String appDate;
+    private String appTime;
+    private double consFee;
+
+    public setValues(String pn, String dn, String ad, String at, double fee ){
+          patName=pn;
+          docName=dn;
+          appDate=ad;
+          appTime=at;
+          consFee=fee;
+    }
+    public String getPatName(){
+        return patName;
+    }
+    public String getDocName(){
+        return docName;
+    }
+    public String getAppDate(){
+        return appDate;
+    }
+    public String getAppTime(){
+        return appTime;
+    }
+    public String getConsFee(){
+        return consFee;
+    }
+}
+class Appointment{
+    private String patName; //1.
+    private String docName;
+    private String appDate;
+    private String appTime;
+    private double consFee;
+
+    public setValues(String pn, String dn, String ad, String at, double fee ){
+          patName=pn;
+          docName=dn;
+          appDate=ad;
+          appTime=at;
+          if(consFee<0){
+             System.out.println("Error);
+          }
+          else{
+           consFee=fee;
+          }
+    }
+    public void  setConsFee(){
+        if(consFee<0){
+            System.out.println("Error");
+        }
+    }   
+}
+class Apptmt{
+    private String patName; //1.
+    private String docName;
+    private String appDate;
+    private String appTime;
+    private double consFee;
+
+    public void setValues(String pn, String dn, String ad, String at, double Fee){
+          patName=pn;
+          docName=dn;
+          appDate=ad;
+          appTime=at;
+          consFee=Fee;
+        
+    }
+    public void displayInfo(){
+        System.out.println("Patient Name:"+ patName +"\nDoctor Name:"+ docName + "\nAppDate:"+ appDate +"\nAppTime:"+ appTime + "\nConsFee: "+ consFee);
+    }
+}
+class Apptmt{
+    private String patName; //1.
+    private String docName;
+    private String appDate;
+    private String appTime;
+    private double consFee;
+
+    public void setValues(String pn, String dn, String ad, String at, double Fee){
+          patName=pn;
+          docName=dn;
+          appDate=ad;
+          appTime=at;
+        if(Fee<0){
+            System.out.println("Error");
+        }
+        else{
+            consFee=Fee;
+        }   
+    }
+
+    public void displayInfo(){
+        System.out.println("Patient Name:"+ patName +"\nDoctor Name:"+ docName + "\nAppDate:"+ appDate +"\nAppTime:"+ appTime + "\nConsFee: "+ consFee);
+    }
+}
+class AppTest{
+    public static void main(String[] args){
+        Apptmt p1=new Apptmt();
+        Apptmt p2=new Apptmt();
+        Apptmt p3=new Apptmt();
+        p1.setValues("Navya","Lavanya","25-01-25","6:00 pm",-25.0);
+        p2.setValues("Zuveriya","Lavanya","28-01-25","7:00 pm ",500.0);
+        p3.setValues("Amulya","Lavanya","24-01-25","8:00 pm ",1000.0);
+        p1.displayInfo();
+        System.out.println();
+        p2.displayInfo();
+        System.out.println();
+        p3.displayInfo();
+    }
+}
+
