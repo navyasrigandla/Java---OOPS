@@ -1,0 +1,55 @@
+class Investment{
+    public void investInfo(){
+        System.out.println("Investment Info");
+    }
+}
+class Stock extends Investment {
+    double dvd_sec;
+    double mar_sec;
+     public void setValues(double d, double c){
+       dvd_sec=d;
+       mar_sec=c;
+    }
+    public double getDvds(){
+        return dvd_sec;
+    }
+    public double getCpnr(){
+        return mar_sec;
+    }
+    public void investInfo(){
+        System.out.println("Investment Info with dividend sector and market sector.\n");
+    }
+}
+class Bond extends Investment{
+   String mat_date;
+   int cpn_rate;
+   public void setValues(String dt, int rt){
+     mat_date=dt;
+     cpn_rate=rt;
+   }
+   public String getDate(){
+        return mat_date;
+    }
+    public double getCpn(){
+        return cpn_rate;
+    }
+     public void investInfo(){
+        System.out.println("Investment Info with maturity date and market info\n");
+    } 
+}
+class FinDom{
+    public static void main(String[] args){
+        Stock st=new Stock();
+        Bond bd=new Bond();
+        st.setValues(30.25, 50);
+        bd.setValues("25-01-26", 45);
+        
+        System.out.println(st.getDvds());
+        System.out.println(st.getCpnr());
+        System.out.println(bd.getDate());
+        System.out.println(bd.getCpn());
+        st.investInfo();
+        bd.investInfo();
+    }
+}
+
