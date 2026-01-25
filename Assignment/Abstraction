@@ -1,0 +1,48 @@
+abstract class Event{
+    abstract void planEvent();
+    abstract void cal_Bgt();
+}
+class Wedding extends Event{
+     int Guests;
+     public void setValues(int n){
+        Guests=n;
+     }
+       public int getValue(){
+        return Guests;
+     }
+      public void planEvent(){
+        System.out.println("Planning Event for "+Guests);
+     }
+     public void cal_Bgt(){
+        System.out.println("Budget: "+ Guests * 500 );
+     }
+}
+class Conference extends Event{
+     int Speakers;
+      public void setValues(int m){
+        Speakers=m;
+     }
+     public int getValue(){
+        return Speakers;
+     }
+     public void planEvent(){
+        System.out.println("Conference : "+Speakers );
+     }
+     public void cal_Bgt(){
+         System.out.println("Budget: "+Speakers * 2000);
+     }
+}
+class EVM{
+    public static void main(String[] args){
+        Wedding w=new Wedding();
+        Conference c = new Conference();
+        w.setValues(100);
+        c.setValues(20);
+        System.out.println(w.getValue());
+        System.out.println(c.getValue());
+        w.planEvent();
+        w.cal_Bgt();
+        c.planEvent();
+        c.cal_Bgt();
+  }
+}
