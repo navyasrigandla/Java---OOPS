@@ -1,0 +1,50 @@
+
+class Vehicle{
+    public void startEng(){
+        System.out.println("To Start the engine.");
+    }
+    public void stopEng(){
+        System.out.println("To Stop the engine");
+    }  
+    public void displayInfo(){
+       System.out.println("Vehicle Info.");
+    }
+}
+class car extends Vehicle{
+    int no_Doors = 4;
+    public void startEng(){
+        System.out.println("Start Engine: Put the key and start the car");
+    }
+    public void stopEng(){
+        System.out.println("Stop Engine:Slow down the car and remove keys");
+    }
+    public void displayInfo(){
+        System.out.println("Car - BMW ");
+    }
+
+}
+class bicycle extends Vehicle{
+    String type = "Road";
+    public void startEng(){
+        System.out.println("Start Engine:No need of any key");
+    }
+    public void stopEng(){
+        System.out.println("Stop Engine:Just stop it using break.");
+    }
+    public void displayInfo(){
+        System.out.println("Bicycle : Using Pedals");
+    }
+}
+public class TDomain {
+    public static void main(String[] args){
+       car c =new car(); 
+       bicycle b = new bicycle();
+       c.startEng();
+       c.stopEng();
+       c.displayInfo();
+       System.out.println();
+       b.startEng();
+       b.stopEng();
+       c.displayInfo();
+    }
+}
